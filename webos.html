@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webos.css" />
+    <title>Document</title>
+</head>
+<body>
+
+<header>
+
+    <nav class="gg">
+
+<ul>
+    <li><a href="#" id="startBtn" onclick="show('startsystem')">start system</a></li>
+    <li><a href="#" onclick="show('shutdown')">shutdown</a></li>
+</ul>
+
+</nav>
+
+<section class="s active" id="shutdown">
+<h1>
+    to start system press start system
+</h1>
+</section>
+
+<section class="s" id="startsystem">
+<h1>welcome!!!</h1>
+<p>this system can make some simple tasks</p>
+
+<nav class="gs">
+
+    <ul>
+        <li><a href="https://www.youtube.com" class="press2" target="_blank">youtube</a></li>
+        <li><a href="https://www.google.com/" class="press" target="_blank">chrome</a></li>
+    </ul>
+    
+    </nav>
+
+</section>
+</header>
+
+<script>
+    function show(id) {
+  document.querySelectorAll("section.s").forEach(s => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+
+  const startBtn = document.getElementById("startBtn");
+  const shutbtn = document.getElementById("shutBtn");
+    if (id === "startsystem") {
+      startBtn.style.display = "none";
+    } else {
+      startBtn.style.display = "inline";
+    }
+}
+</script>
+
+</body>
+</html>
